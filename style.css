@@ -1,29 +1,47 @@
-#app {
-  height: 600px;
-  width: 800px;
-  font-size: 3em;
+#header {
+        grid-area: header;
+        background-color: red;
+        
+}    
+
+#article1 {
+    grid-area: article1;
+    background-color: yellow;
 }
 
-#header {
-  background-color: red;
+#article2 {
+    grid-area: article2;
+    background-color: green;
 }
 
 #footer {
-  background-color: indigo;
-}
-
-#article-1 {
-  background-color: yellow;
-}
-
-#article-2 {
-  background-color: green;
+    grid-area: footer;
+    background-color: purple;
 }
 
 #nav {
-  background-color: orange;
+    grid-area: nav;
+    background-color: orange;
 }
 
-#ad-area {
-  background-color: blue;
+#ad {
+    grid-area: ad;
+    background-color: blue;
 }
+
+#page {
+    display: grid;
+    align-content: stretch;
+    grid-template-columns: 200px 250px 350px 350px;
+    grid-template-rows: 150px 250px 250px 100px 50px;
+    grid-template-areas: 
+    "header header header header header"
+    "nav article1 article1 ad ad"
+    "nav article2 article2 ad ad"
+    "footer footer footer footer footer"
+    ;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+
